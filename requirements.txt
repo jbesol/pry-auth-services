@@ -1,0 +1,28 @@
+# Framework principal y servidor
+fastapi==0.115.0          # Framework web para construir la API
+uvicorn[standard]==0.30.6 # Servidor ASGI que corre FastAPI
+
+# Base de datos
+sqlalchemy==2.0.36        # ORM para definir modelos y hacer queries
+asyncpg==0.30.0           # Driver async para conectarse a PostgreSQL
+alembic==1.14.0           # Migraciones: controla los cambios del schema de la DB
+
+# Configuración y validación
+pydantic-settings==2.6.1  # Lee variables de entorno y las valida al arrancar
+pydantic[email]==2.10.0   # Validación de datos y DTOs (schemas de entrada/salida)
+
+# Seguridad
+python-jose[cryptography]==3.3.0  # Crea y verifica tokens JWT
+bcrypt==4.2.0                     # Hashea contraseñas con bcrypt
+
+# Cache y blacklist de tokens
+redis==5.2.0              # Cliente para conectarse a Redis
+
+# Utilidades
+python-dotenv==1.0.1      # Carga el archivo .env en el entorno
+
+# Testing
+pytest==8.3.0
+pytest-asyncio==0.24.0
+httpx==0.27.0
+aiosqlite==0.20.0   # Driver SQLite async para tests
